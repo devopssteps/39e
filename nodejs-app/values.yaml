@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: devopssteps/nodejs-app
+  tag: "1.0"
+  pullPolicy: Always # using Always, if any chnage in docker image eventhough tag is same but it will force to deploy pods with new image #IfNotPresent
+
+service:
+  type: NodePort
+  port: 3000
+
+resources: {}
